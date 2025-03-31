@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# @Time : 3/4/2024 12:37
-# @Author : Chen Mingzheng
 import pandas as pd
 import numpy as np
 import os
@@ -99,7 +97,6 @@ class Data_Preprocess():
         self.phenocam_csv = r'data_analysis\station_distribution/phenocam_eur_plus2.csv'
         self.webcam_csv = r'data_analysis\station_distribution/webcam_plus2.csv'
         self.pep_csv = r'data_analysis\station_distribution/pep_plus_2.csv'
-        self.raw_pep_path = r'data collection\PEP725\PEP725_Export_20240402\PEP725_CMingzheng_20240402/reorganized'
 
     def station_data_filtering_by_drought_event(self,drgouht_time,save_path,temperal_limitition = 1):
         '''
@@ -420,8 +417,6 @@ class Data_Preprocess():
 
 class PEP725():
     def __init__(self):
-        self.root_path = r'data collection\PEP725\PEP725_Export_20240402\PEP725_CMingzheng_20240402'
-        self.reorganized_root_path = r'data collection\PEP725\PEP725_Export_20240402\PEP725_CMingzheng_20240402/reorganized'
 
     def reorganize_data(self,path):
         df = pd.read_csv(path,sep=';')
@@ -636,7 +631,7 @@ class RS_GEE():
     def __init__(self):
 
         ee.Authenticate()
-        ee.Initialize(project='ee-chenmingzheng64')
+        ee.Initialize(project='ee-')
         geemap.ee_initialize()
         self.european_shp = r'C:\CMZ\pycharm_projects\pythonProject\TUM\paper projects\1 legacy effects of drought\data collection/European_ExportFeatures_ExportFeatures.shp'
         self.MODIS_save_path = r'D:\Data Collection\RS\MODIS\NDVI'
