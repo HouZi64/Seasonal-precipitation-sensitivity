@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Time : 5/9/2025 10:06
-# @Author : Chen Mingzheng
+# @Author :
 import time
 from joblib import Parallel, delayed
 import random
